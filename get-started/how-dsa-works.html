@@ -1,0 +1,501 @@
+<!doctype html>
+<html xml:lang="en-gb" lang="en-gb" >
+
+<!-- Mirrored from iot-dsa.org/get-started/how-dsa-works by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Dec 2021 17:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,latin-ext" type="text/css" />
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+    	<base  />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Open Source IoT Platform, IOT, Internet of Things, Open Source Platform, Open Source Toolkit, Open Source technology, Internet of Things Platform" />
+	<meta name="author" content="Super User" />
+	<meta name="description" content="Distributed Services Architecture (DSA) is the open source IoT platform that facilitates device inter-communication, logic and applications at every layer of the Internet of Things Infrastructure. " />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Open Source IoT Platform &amp; Toolkit | DSA - How DSA Works</title>
+	<link href="../templates/destinyfx/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="../templates/destinyfx/css-compiled/menu-dbe65e203b3bb9926ba513a87b479e9e.css" type="text/css" />
+	<link rel="stylesheet" href="../libraries/gantry/css/grid-responsive.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css/grid-responsive.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css-compiled/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css-compiled/master-96633374d16a822437041bfe2b9e87ab.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css/master-chrome.css" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css-compiled/mediaqueries.css" type="text/css" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,latin-ext" type="text/css" />
+	<link rel="stylesheet" href="../templates/destinyfx/css/uikitanimations.css" type="text/css" />
+	<style type="text/css">
+#rt-logo {background: url(../images/DSA_Logo_dark_final.png) 50% 0 no-repeat !important;}
+#rt-logo {width: 115px;height: 61px;}
+h1, h2, h3, h4, h5, h6, .gf-menu .item, #featuredprojects h4, p.acymailing_mootoolsintro, .tp-caption.destinyfx_white_title, .tp-caption.destinyfx_darkbg_title, .tp-caption.destinyfx_whitebg_title, .features3 h4 span { font-family: 'Open Sans', 'Helvetica', arial, serif !important; }
+	</style>
+	<script src="../media/system/js/mootools-core.js" type="text/javascript"></script>
+	<script src="../media/system/js/core.js" type="text/javascript"></script>
+	<script src="../media/system/js/mootools-more.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery.min.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="../media/system/js/caption.js" type="text/javascript"></script>
+	<script src="../media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../libraries/gantry/js/gantry-totop.js" type="text/javascript"></script>
+	<script src="../libraries/gantry/js/browser-engines.js" type="text/javascript"></script>
+	<script src="../templates/destinyfx/js/destinyfx.js" type="text/javascript"></script>
+	<script src="../templates/destinyfx/js/totop.js" type="text/javascript"></script>
+	<script src="../templates/destinyfx/js/uikit.min.js" type="text/javascript"></script>
+	<script src="../templates/destinyfx/js/rokmediaqueries.js" type="text/javascript"></script>
+	<script src="../modules/mod_roknavmenu/themes/default/js/rokmediaqueries.js" type="text/javascript"></script>
+	<script src="../templates/destinyfx/html/mod_roknavmenu/themes/default/js/responsive.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+ 
+    jQuery(document).ready(function() {
+        jQuery('[data-toggle=tooltip]').tooltip();
+    });            
+    jQuery(document).ready(function () {  
+    jQuery('[data-toggle=popover]').popover();  
+  });
+		if (typeof jQuery != 'undefined') { 
+(function($) { 
+       $(document).ready(function(){
+        $('.carousel').each(function(index, element) {
+                $(this)[index].slide = null;
+               });
+         });
+ })(jQuery);
+};
+	</script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57528513-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  <script src='../../www.google.com/recaptcha/api.js'></script>
+</head>
+<body  class="logo-type-custom headerstyle-light font-family-open-sans font-size-is-default menu-type-dropdownmenu layout-mode-responsive col12">
+        <header id="rt-top-surround">
+				<div id="rt-top" >
+			<div class="rt-top-inner">
+			<div class="rt-container">
+				<div class="rt-grid-6 rt-alpha">
+               <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		
+
+<div class="custom"  >
+	<div class="jfx_social">
+<ul>
+<li><a title="Facebook" href="http://www.facebook.com/iotdsa" target="_blank" data-toggle="tooltip" data-placement="bottom"><span class="icon-facebook"><span class="hiddentext">FACEBOOK</span></span></a></li>
+<li><a title="Twitter" href="http://www.twitter.com/iotdsa" target="_blank" data-toggle="tooltip" data-placement="bottom"><span class="icon-twitter"><span class="hiddentext">TWITTER</span></span></a></li>
+<li><a title="Google +" href="https://plus.google.com/communities/113394281224911921160/op/join?cfem=1" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-google-plus"><span class="hiddentext">GOOGLE +</span></span></a></li>
+<li><a title="LinkedIn" href="https://www.linkedin.com/grp/home?gid=6989800" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-linkedin"><span class="hiddentext">LINKEDIN</span></span></a></li>
+</ul>
+</div></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+<div class="rt-grid-6 rt-omega">
+    
+</div>
+				<div class="clear"></div>
+			</div>
+			</div>
+		</div>
+						<div id="rt-header">
+			<div class="rt-header-inner">
+			<div class="rt-container">
+				<div class="rt-grid-4 rt-alpha">
+            <div class="rt-block logo-block">
+            <a href="../index.html" id="rt-logo"></a>
+        </div>
+        
+</div>
+<div class="rt-grid-8 rt-omega">
+    	<div class="rt-block menu-block">
+		<div class="gf-menu-device-container"></div>
+<ul class="gf-menu l1 " >
+                    <li class="item385 parent active" >
+
+            <a class="item" href="how-dsa-works.html"   onclick='window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;'>
+
+                                Get Started                                
+                            </a>
+
+
+            
+                                    <div class="dropdown columns-1 " style="width:180px;">
+                                                <div class="column col1"  style="width:180px;">
+                            <ul class="l2">
+                                                                                                                    <li class="item389 active last" >
+
+            <a class="item" href="how-dsa-works.html"  >
+
+                                How DSA Works                            </a>
+
+
+                    </li>
+                                                                                                                                                                <li class="item362" >
+
+            <a class="item" href="download-dsa.html"  >
+
+                                Download DSA                            </a>
+
+
+                    </li>
+                                                                                                        </ul>
+                        </div>
+                                            </div>
+
+                                    </li>
+                            <li class="item388 parent" >
+
+            <a class="item" href="https://github.com/IOT-DSA/docs/wiki"   onclick='window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;'>
+
+                                Documentation                                
+                            </a>
+
+
+            
+                                    <div class="dropdown columns-1 " style="width:180px;">
+                                                <div class="column col1"  style="width:180px;">
+                            <ul class="l2">
+                                                                                                                    <li class="item391" >
+
+            <a class="item" href="http://docs.iot-dsa.org/"  >
+
+                                SDK Documentation                            </a>
+
+
+                    </li>
+                                                                                                                                                                <li class="item392" >
+
+            <a class="item" href="https://github.com/IOT-DSA/docs/wiki"  >
+
+                                DSA Documentation                            </a>
+
+
+                    </li>
+                                                                                                                                                                <li class="item425" >
+
+            <a class="item" href="https://plus.google.com/communities/113394281224911921160/stream/c6d55337-0f50-4451-a59d-52345716da73"  >
+
+                                Community Videos                            </a>
+
+
+                    </li>
+                                                                                                        </ul>
+                        </div>
+                                            </div>
+
+                                    </li>
+                            <li class="item344" >
+
+            <a class="item" href="../community.html"  >
+
+                                Community                            </a>
+
+
+                    </li>
+            </ul>		<div class="clear"></div>
+	</div>
+	
+</div>
+				<div class="clear"></div>
+			</div>
+			</div>
+		</div>
+			</header>
+								<div id="rt-transition">
+		<div id="rt-mainbody-surround">
+									<div id="rt-utility">
+				<div class="rt-container">
+										<div class="clear"></div>
+				</div>
+			</div>
+												<div class="rt-container">
+		    		          
+<div id="rt-main" class="mb12">
+                <div class="rt-container">
+                    <div class="rt-grid-12 ">
+                                                						<div class="rt-block">
+	                        <div id="rt-mainbody">
+								<div class="component-content">
+	                            	<article class="item-page" itemscope itemtype="http://schema.org/Article">
+<meta itemprop="inLanguage" content="en-GB" />
+	<h2 itemprop="name">
+							<a href="how-dsa-works.html" itemprop="url"> What is DSA?</a>
+					</h2>
+	
+
+
+
+
+
+
+
+<div itemprop="articleBody">
+	<p>The Internet of Things (IoT) is defined as uniquely identifiable objects and their virtual representations in a connected, internet-like structure. The purpose for the existence of IoT is to ultimately have a fully connected world in which all objects are interoperable with one another regardless of manufacturer, specific device characteristics or functionality. This interoperability enables each object to exchange information amongst, affect the state of and augment behavior of itself or other objects in the ecosystem based on a certain set of criteria and configuration parameters.</p>
+<p><img src="../images/internet-of-things-infographic.png" alt="Open Source IoT Architecture" width="1333" height="382" /></p>
+<p>As the amount of connected objects increases exponentially, so does the variation in their communication methods, configuration parameters and security implementations causing the inability of various objects to be compatible with one another and creating siloed networks of like objects. For a truly connected world, it is important to break down the barriers that inhibit unconstrained interoperability.</p>
+<p>The objective of the Distributed Services Architecture is to unify the disparate devices, services and applications into a structured and adaptable real-time data model. The premise of the open-source DSA initiative is to build a community of manufacturers, makers and solution providers that will contribute to an ever-expanding library of Distributed Service Links which allow protocol translation and data integration to and from 3rd party data-sources.</p>
+ 
+<h2 style="line-height: 15.8079996109009px;"> </h2>
+<h2>Benefits of DSA</h2>
+<p>DSA allows for purpose-built products and services (i.e. DSLinks) to interact with one another in a decentralized manner. This architecture enables a network architect to distribute functionality between discrete computing resources. A network topology consisting of multiple DSLinks running on edge devices connected to a tiered hierarchy of brokers allows the system as a whole to be scalable, resilient to failure and take advantage of all computing resources available to it from the edge, the datacenter, the cloud and everything in between.</p>
+<p> </p>
+<p><img src="../images/iot-dsa-broker-concept.png" alt="Open Source IoT Infrastructure Example" width="1000" height="394" /></p>
+<p>All DSA modules are lightweight, making it possible to couple the DSBroker, multiple DSLinks and client web-applications on the same low powered device such as a Raspberry PI, Beaglebone black or any other similar computing platform. The small footprint makes it possible to ship a full-stack appliance to customers, while the capability of DSBrokers connecting to other DSBrokers enables the interconnection of appliances with cloud services. This architecture creates multiple layers of tenancy on the network for different types of application enablement use-cases.</p>
+<p>The DSA specification calls for upstream connections to be created by the initiating device; thus the connections are made in an outbound manner enabling full-duplex communication transparently traversing firewalls and proxies. All DSA components utilize the nodeAPI for the communication protocol and websockets with http fallback for transport. This HTTP standard compliant manner of communication benefits the users and network administrators by being compatible with all network routing, load balancing and proxying techniques existing in the market.</p>
+<p>A properly provisioned DSA system allows to easily create value added applications on top of an easily configured directory of streaming data from devices and services.</p>
+<h2>Core Components of DSA</h2>
+<p>DSA has three core components; DSBroker, DSLink and nodeAPI. The DSBroker acts as a router for incoming and outgoing streams and the DSLinks that are connected to the DSBroker act as originators of the data streams. The Architecture allows for DSBrokers to connect to other DSBrokers to form a scalable and distributed event stream processing network that mimics neural connections in the human brain. The communication protocol between DSA nodes is facilitated by the nodeAPI which ensures node compatibility and bi-directional control and monitoring ability between connected components.</p>
+<p>The <a title="DSA GitHub" href="https://github.com/IOT-DSA" target="_blank">DSA GitHub</a> repositories contain various implementations of DSBroker and DSLink specifications in multiple programming languages ensuring simple integration of DSA capability into new and existing products regardless of any specific computing platform and/or programming language.</p>
+<p>The DSA mission is to democratize data and our community strives to provide royalty free and open-source implementations of cross-industry protocols and application platforms. <a href="../community.html">DSA community members</a> provide open-source, freeware and commercial DSLinks to ensure that there is way to interconnect otherwise incompatible systems with each other and build value-added applications on top of them.</p>
+<p> </p>
+<div class="tabbable" style="margin-bottom: 18px;">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Distributed Service Broker</a></li>
+<li><a href="#tab2" data-toggle="tab">Distributed Service Link</a></li>
+<li><a href="#tab3" data-toggle="tab">nodeAPI</a></li>
+</ul>
+<div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+<div id="tab1" class="tab-pane active">
+<h2 class="p1"><img src="../images/dsa-broker-icon.png" alt="" width="45" height="45" />  Distributed Service Broker</h2>
+<p class="p1"> </p>
+<p class="p1"><span class="s1">The DSA community provides an open-source Apache 2.0 licensed implementation of a DSBroker written in Dart. The Dart DSBroker runs on any platform, including Linux, OSX, and Windows, as well as mobile platforms like Android.</span></p>
+<p class="p1"><span class="s1">The DSA community is striving to provide other broker implementations in different programming languages targeting multiple cloud and embedded platforms.</span></p>
+<p class="p1"><span class="s1">The DSBroker specification dictates the following application responsibilities that must be implemented:</span></p>
+<ul class="ul1">
+<li class="li2"><span class="s1">Persist all configuration data to disk</span></li>
+<li class="li2"><span class="s1">Manage node permissions</span></li>
+<li class="li2"><span class="s1">Manage node attributes</span></li>
+<li class="li2"><span class="s1">Manage connections from DSLinks</span></li>
+<li class="li2"><span class="s1">Dictate M2M authorization lifecycle</span></li>
+<li class="li2"><span class="s1">Expose websocket / http endpoint for subscribing to node and value changes from the broker</span></li>
+<li class="li2"><span class="s1">Expose websocket / http endpoint for exposing DSLink data and functionality to the broker</span></li>
+<li class="li2"><span class="s1">Manage subscriptions for listeners and QoS buffers for publishers</span></li>
+<li class="li2"><span class="s1">Implement DSA Query DSL</span></li>
+</ul>
+<p class="p1"><span class="s1">A piece of data on the DSA network starts its life-cycle residing inside of a DSLink. By itself the DSLink will not publish any data updates unless something is able to subscribe to it. If we apply the old saying “If a tree falls in a forest and no one is around to hear it, does it make a sound?” to DSA, the answer is no, it doesn’t make a sound until someone with ears walks into the forest to check on it. For security purposes all connections within DSA are established utilizing a reverse-tunnel metaphor. A DSLink must connect to a DSBroker, thus advertising itself to it, and the DSBroker based on security policy establishes a connection back to the DSLink through the same websocket channel or by pushing event queues if the DSLink is connected via a long polling HTTP channel. To achieve scalability, DSBrokers can connect to other DSBrokers and in that context the child DSBroker is functioning just like any other DSLink that is connected to that DSBroker.</span></p>
+<p class="p1"><span class="s1">The DSA query Domain-Specific Language is utilized to query for specific data-sets or nodes on the DSA network. The queries cascade downstream to nodes and brokers in such a manner that facilitates as much computation as possible on individual nodes and only performs set joins and aggregation on the upper-stream nodes. This truly enables the edge-compute use-case that is prevalent in high density IoT/IoE networks.</span></p>
+</div>
+<div id="tab2" class="tab-pane">
+<h2 class="p1" style="line-height: 15.8079996109009px;"><img src="../images/dsa-dslink-icon.png" alt="" width="45" height="45" />  Distributed Service Link</h2>
+<p class="p1"><span class="s1">The purpose of a DSLink is to wrap a certain domain specific library or functionality and expose it as an entity on a DSA network. The DSA community is striving to contribute multiple implementations of DSLinks in all of the popular languages to enable easy integration into any application.</span></p>
+<p class="p1"><span class="s1">The function of a DSLink is to connect to a DSBroker and advertise available services via the nodeAPI protocol and respond to nodeAPI requests and subscriptions. If the DSLink itself needs to subscribe to data on the DSBroker then another communication channel is established based on security policy that allows the DSLink to subscribe to events originating from other DSLinks.</span></p>
+<p class="p1"><span class="s1">This design-pattern completely abstracts functionality from any one element on the network and ensures truly distributed computation throughout the IoT/IoE stack. </span></p>
+<p class="p1">See existing DSLinks that are available!</p>
+<p class="p1"><a class="btn btn-large btn-primary" style="font-size: 12.1599998474121px; line-height: 15.8079996109009px;" href="https://github.com/IOT-DSA" target="_blank">DSLinks on GitHub</a></p>
+<p class="p2"><span class="s1"><b>DSA community members’ short-term roadmap is to provide the following open-source DSLinks to the masses:</b></span></p>
+<div class="alert alert-info"><button class="close" type="button" data-dismiss="alert"></button> <strong>Historian - store and query time-series data</strong></div>
+<ul class="ul1">
+<li class="li3"><span class="s1">ETSDB - Embedded Time Series Database</span></li>
+<li class="li3"><span class="s1">MS SQL</span></li>
+<li class="li3"><span class="s1">MySQL</span></li>
+<li class="li3"><span class="s1">Postgres</span></li>
+<li class="li3"><span class="s1">Cassandra</span></li>
+<li class="li3"><span class="s1">Oracle</span></li>
+<li class="li3"><span class="s1">Hadoop</span></li>
+</ul>
+<div class="alert alert-info"><button class="close" type="button" data-dismiss="alert"></button> <strong>Analytics - 3rd party processing systems</strong></div>
+<ul class="ul1">
+<li class="li3"><span class="s1">R Project</span></li>
+<li class="li3"><span class="s1">RDBMS</span>
+<ul>
+<li class="li3"><span class="s1">JDBC SQL passthrough and prepared statements</span></li>
+</ul>
+</li>
+<li class="li3"><span class="s1">Haystack DSLink *</span></li>
+<li class="li3"><span class="s1">Niagara DSLink</span></li>
+<li class="li3"><span class="s1">OS X DSLink</span></li>
+<li class="li3"><span class="s1">Windows DSLink</span></li>
+<li class="li3"><span class="s1">*nix DSLink</span></li>
+</ul>
+<div class="alert alert-info"><button class="close" type="button" data-dismiss="alert"></button> <strong>Fieldbus protocols - Monitor and control fieldbus protocol devices</strong></div>
+<ul class="ul2">
+<li class="li3"><span class="s1">BACnet MSTP / IP</span></li>
+<li class="li3"><span class="s1">Modbus RTU / TCP</span></li>
+<li class="li3"><span class="s1">OPC DA</span></li>
+<li class="li3"><span class="s1">SNMP</span></li>
+<li class="li3"><span class="s1">EnOcean</span></li>
+<li class="li3"><span class="s1">Insteon</span></li>
+<li class="li3"><span class="s1">MBus</span></li>
+<li class="li3"><span class="s1">KNX</span></li>
+<li class="li3"><span class="s1">DMX</span></li>
+<li class="li3"><span class="s1">ZWave</span></li>
+<li class="li3"><span class="s1">Zigbee</span></li>
+</ul>
+<div class="alert alert-info"><button class="close" type="button" data-dismiss="alert"></button> <strong>Hardware Integration - Expose OS and Device specific functions such as led control, network settings, resource consumption, etc...</strong></div>
+<ul class="ul1">
+<li class="li3"><span class="s1">Dreamplug</span></li>
+<li class="li3"><span class="s1">Beaglebone</span></li>
+<li class="li3"><span class="s1">Raspberry PI</span></li>
+<li class="li3"><span class="s1">Android DSLink</span></li>
+<li class="li3"><span class="s1">OS X DSLink</span></li>
+<li class="li3"><span class="s1">Windows DSLink</span></li>
+<li class="li3"><span class="s1">*nix DSLink</span></li>
+</ul>
+<div class="alert alert-info"><button class="close" type="button" data-dismiss="alert"></button> <strong>Hobby and Home Automation</strong></div>
+<ul class="ul2">
+<li class="li3"><span class="s1">Philips Hue *</span></li>
+<li class="li3"><span class="s1">Sonos</span></li>
+<li class="li3"><span class="s1">Belkin Wemo *</span></li>
+<li class="li3"><span class="s1">Google Nest *</span></li>
+</ul>
+</div>
+<div id="tab3" class="tab-pane">
+<h2 class="p1" style="line-height: 15.8079996109009px;"><img src="../images/dsa-nodeApi-icon.png" alt="" width="45" height="45" />  nodeAPI</h2>
+<p class="p1"><span class="s1">The nodeAPI is the common communication method for all DSA nodes and facilitates all messaging between entities in a standardized manner. The nodeAPI is responsible for traversing node hierarchies, subscribing to values and streams, and invoking actions on any element within the network.</span></p>
+<p> <a class="btn btn-small btn-primary" href="https://github.com/IOT-DSA/docs/wiki/Node-API">nodeAPI Wiki on Github</a></p>
+</div>
+</div>
+<p> </p>
+</div></div>
+
+
+
+	</article>
+
+
+
+								</div>
+	                        </div>
+						</div>
+                                                                    </div>
+                                        <div class="clear"></div>
+                </div>
+            </div>
+		    	</div>
+											</div>
+	</div>
+				<div id="rt-colored">
+		<div class="rt-container">
+			<div class="rt-grid-12 rt-alpha rt-omega">
+               <div class="rt-block ">
+           	<div class="module-surround">
+	           		                	<div class="module-content">
+	                		
+
+<div class="custom"  >
+	<h2 style="text-align: center;"> <a href="http://docs.iot-dsa.org/"><img src="../images/code-icon.png" alt="" width="100" height="100" /></a></h2>
+<h2 style="text-align: center; font-color: #ffffff;">Learn DSA</h2></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+			<footer id="rt-footer-surround">
+				<div id="rt-footer">
+			<div class="rt-container">
+				<div class="rt-grid-4 rt-alpha">
+               <div class="rt-block ">
+           	<div class="module-surround">
+	           				<div class="module-title">
+	                		<h2 class="title"><span>About DSA</span></h2>
+			</div>
+	                		                	<div class="module-content">
+	                		
+
+<div class="custom"  >
+	<p>Distributed Services Architecture, a modular design enabling pluggable components to be created for any layer of an IoT implementation.</p>
+<div class="jfx_social">
+<ul data-uk-scrollspy="{cls:'uk-animation-scale-up', delay:200}">
+<li><a title="Facebook" href="http://www.facebook.com/iotdsa" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-facebook"><span class="hiddentext">FACEBOOK</span></span></a></li>
+<li><a title="Twitter" href="http://www.twitter.com/iotdsa" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-twitter"><span class="hiddentext">TWITTER</span></span></a></li>
+<li><a title="Google +" href="https://plus.google.com/communities/113394281224911921160/op/join?cfem=1" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-google-plus"><span class="hiddentext">GOOGLE +</span></span></a></li>
+<li><a title="LinkedIn" href="https://www.linkedin.com/grp/home?gid=6989800" target="_blank" data-toggle="tooltip" data-placement="top"><span class="icon-linkedin"><span class="hiddentext">LINKEDIN</span></span></a></li>
+</ul>
+</div></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+<div class="rt-grid-4">
+               <div class="rt-block hidden-phone">
+           	<div class="module-surround">
+	           				<div class="module-title">
+	                		<h2 class="title"><span>Get Started</span></h2>
+			</div>
+	                		                	<div class="module-content">
+	                		
+
+<div class="customhidden-phone"  >
+	<div class="intouch">
+<ul>
+<li><a href="how-dsa-works.html">How DSA Works</a></li>
+<li><a href="download-dsa.html">Download</a></li>
+<li><a href="https://github.com/IOT-DSA/docs/wiki" target="_blank">Documentation</a></li>
+</ul>
+</div></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+<div class="rt-grid-4 rt-omega">
+               <div class="rt-block hidden-phone">
+           	<div class="module-surround">
+	           				<div class="module-title">
+	                		<h2 class="title"><span>Community</span></h2>
+			</div>
+	                		                	<div class="module-content">
+	                		
+
+<div class="customhidden-phone"  >
+	<div class="intouch">
+<ul>
+<li><a href="../community.html">Join Our Community</a></li>
+<li><a href="https://plus.google.com/u/0/communities/113394281224911921160?cfem=1" target="_blank">Google+ Community</a></li>
+<li><a href="https://www.linkedin.com/grp/home?gid=6989800" target="_blank">LinkedIn Group</a></li>
+<li><em>We use</em>  <a href="http://www.ej-technologies.com/products/jprofiler/overview.html" target="_blank">Java Profiler</a></li>
+</ul>
+</div></div>
+	                	</div>
+                	</div>
+           </div>
+	
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+						<div id="rt-copyright">
+			<div class="rt-container">
+				<div class="rt-grid-12 rt-alpha rt-omega">
+    	<div class="clear"></div>
+	<div class="rt-block">
+		<span class='copyright'>© DSA Initiative. </a></span>	</div>
+	
+</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+						<div id="rt-totop">
+            <div class="rt-grid-12 rt-alpha rt-omega">
+    	<div class="clear"></div>
+	<div class="rt-block">
+		<a href="#" id="gantry-totop" rel="nofollow"><i class="icon-chevron-up"></i></a>
+	</div>
+	
+</div>
+            <div class="clear"></div>
+		</div>
+			</footer>
+				</body>
+
+<!-- Mirrored from iot-dsa.org/get-started/how-dsa-works by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Dec 2021 17:53:35 GMT -->
+</html>

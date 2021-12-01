@@ -1,0 +1,15 @@
+#rt-top.rttopfixedtop {
+	z-index: auto !important;
+}
+
+.articles1 .nspArt {
+	-webkit-backface-visibility: hidden;
+}
+
+.gf-menu .dropdown {
+	z-index: auto !important;
+}
+
+#rt-header.rtheaderfixedtop {
+	z-index: auto;
+}
